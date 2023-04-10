@@ -1,0 +1,70 @@
+.swipe-card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.swipe-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.shuffle-btn {
+  position: absolute;
+  bottom: 10px; /* กำหนดขอบล่างให้ห่าง 10px จากขอบ */
+  right: 10px; /* กำหนดขอบขวาให้ห่าง 10px จากขอบ */
+}
+
+.btn.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s ease;
+  border-radius: 50%; /* ทำให้ปุ่มมีลักษณะเป็นวงกลม */
+}
+
+.btn.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.btn.btn-primary:active {
+  background-color: #0062cc;
+  border-color: #005cbf;
+  box-shadow: none;
+}
+
+.animate-shuffle {
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
