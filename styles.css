@@ -1,7 +1,9 @@
 .swipe-card {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 80vw; /* กำหนดความกว้างเป็น 80% ของ viewport width */
+  height: calc(80vw * 1); /* กำหนดความสูงเท่ากับความกว้าง */
+  display: flex; /* ใช้ flex layout  */
+  justify-content: center; /* จัดกึ่งกลาง */
   overflow: hidden;
   margin: auto;
 }
@@ -12,8 +14,11 @@
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%; /* กำหนดความกว้างเป็น 100% */
+  height: 100%; /* กำหนดความสูงเป็น 100% */
   background-size: cover;
   background-position: center;
+  background-origin: border-box; /* กำหนดพื้นที่ของพื้นหลังตามขนาดของ border box */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
